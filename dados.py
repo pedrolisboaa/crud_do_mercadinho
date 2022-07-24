@@ -16,8 +16,8 @@ class Dados:
         self.conexao.commit()
 
     def atualizar_dado(self, antigo, novo):
-        self.cursor.execute(f'UPDATE estoque SET PRODUTO=:PRODUTO WHERE PRODUTO=:PRODUTO',
-                            {'PRODUTO': novo, 'PRODUTO': antigo})
+        # VEI tem que colocar '' (aspas simples) para o update
+        self.cursor.execute(f"UPDATE estoque SET PRODUTO = '{novo}' WHERE PRODUTO = '{antigo}'")
         self.conexao.commit()
 
     def mostrar_banco(self):
