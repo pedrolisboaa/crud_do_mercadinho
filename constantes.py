@@ -1,0 +1,2 @@
+# CORES
+FUNDO = 'grey80'
